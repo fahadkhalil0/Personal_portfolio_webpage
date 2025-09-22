@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fahad Khalil — Software Engineer</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <!--NAV -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a class="logo" href="#hero">
+        <img src="assests/logo.png" alt="Website Logo">
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false"
+        aria-label="Toggle navigation">
+
+        <!-- simple hamburger -->
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#hero">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="hero" class="section hero reveal">
+      <div class="container hero-inner">
+        <h1 class="hero-heading">Hello — I'm <span class="accent">Fahad Khalil</span><span class="cursor">.</span></h1>
+        <p class="lead">AI/ML Engineer | Software Engineer | Passionate about Python & Modern Web</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about reveal">
+      <div class="container about-container">
+        <!-- Left Column: About Text -->
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            I'm a dedicated and driven Software Engineering student at SZABIST University,
+            Islamabad, with a strong passion for the rapidly evolving world of technology—
+            particularly in the field of Artificial Intelligence. My academic journey is fueled
+            by curiosity, a love for innovation, and the desire to understand how the global tech
+            industry shapes the modern AI–driven era.
+          </p>
+
+          <p>
+            I have built a solid foundation in core web technologies including HTML, CSS, and
+            JavaScript. Recently, I completed an in-depth study of Python, developing projects
+            that applied essential programming concepts to solve practical problems.
+          </p>
+
+          <p>
+            Currently, I am focusing on Data Structures and Algorithms (DSA) to strengthen my
+            problem-solving ability and prepare for advanced work in Machine Learning. My
+            long-term career goal is to become a Machine Learning Engineer, dedicated to
+            designing intelligent systems and solving complex challenges.
+          </p>
+        </div>
+
+        <!-- Right Column: Image + Info -->
+        <div class="about-aside">
+          <div class="about-image">
+            <img src="assests/image.jpeg" alt="Fahad Khalil" width="250" height="250">
+          </div>
+          <h3>Fahad Khalil</h3>
+          <p>Software Engineering Student | Aspiring ML Engineer</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/imfahadkhalil/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/fahadkhalil0" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/SolangiFahad2" target="_blank"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills reveal">
+      <div class="container">
+        <h2><strong>My Skills</strong></h2>
+        <p class="skills-intro">
+          Tools & Technologies
+        </p>
+        <div class="skills-grid">
+          <div class="skill-card"><i class="fab fa-html5"></i> Hyper Text Markup Language</div>
+          <div class="skill-card"><i class="fab fa-css3-alt"></i> Cascading Style Sheet</div>
+          <div class="skill-card"><i class="fab fa-python"></i> Python</div>
+          <div class="skill-card"><i class="fas fa-code"></i> Data Structures & Algorithms</div>
+          <div class="skill-card"><i class="fas fa-robot"></i> Machine Learning</div>
+          <div class="skill-card"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+        </div> <br>
+
+        <!-- Special Animated Functionality for Skill section -->
+        <div class="skill">
+          <div class="skill-header">
+            <span>Hyper Text Markup Language</span>
+            <span class="skill-percent">79%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--width: 79%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-header">
+            <span>Cascading Style Sheet</span>
+            <span class="skill-percent">66%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--width: 66%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-header">
+            <span>Python</span>
+            <span class="skill-percent">67%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--width: 67%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-header">
+            <span>Data Structures & Algorithms</span>
+            <span class="skill-percent">60%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--width: 60%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-header">
+            <span>Machine Learning</span>
+            <span class="skill-percent">51%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--width: 51%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-header">
+            <span>Git & Github</span>
+            <span class="skill-percent">94%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--width: 94%;"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects reveal">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="muted">A Glimpse of My Work</p>
+        <!-- Project Grid -->
+        <div class="projects-grid">
+          <article class="project-card" tabindex="0">
+            <div class="project-media" aria-hidden="true" style="background-image: url(assests/jarvis.jpg);"></div>
+            <h3>Jarvis Assistant</h3>
+            <p class="muted small">Developed a Python-based personal assistant that listens to voice commands, processes
+              them, and performs real-time actions like opening apps/websites, playing music, and generating AI-powered
+              responses.</p>
+            <a class="card-link"
+              href="https://github.com/fahadkhalil0/Python_Full_Journey/tree/projects/Mega_Project/jarvis_ai_assistant"
+              aria-label="Open Project One">Live →</a>
+          </article>
+
+          <article class="project-card" tabindex="0">
+            <div class="project-media" aria-hidden="true" style="background-image: url(assests/Robot.jpg);"></div>
+            <h3>AI Auto Responder</h3>
+            <p class="muted small">Built a Python-based WhatsApp auto-responder that uses automation and AI to send
+              natural, human-like replies in real time.</p>
+            <a class="card-link"
+              href="https://github.com/fahadkhalil0/Python_Full_Journey/blob/main/Mega_Project2/bot.py"
+              aria-label="Open Project Two">Live →</a>
+          </article>
+
+          <article class="project-card" tabindex="0">
+            <div class="project-media" aria-hidden="true" style="background-image: url(assests/animal-guess.jpg);">
+            </div>
+            <h3>Guess The Animal (C++ Project)</h3>
+            <p class="muted small">This project is an interactive console-based game built in C++ where the program
+              attempts to guess the animal the user is thinking of by asking a series of yes/no questions.</p>
+            <a class="card-link" href="https://www.linkedin.com/in/imfahadkhalil/details/projects/"
+              aria-label="Open Project Three">Live →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact reveal">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="muted">Want further information? Contact me now!</p>
+
+        <!-- Single Formspree form -->
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xwpngrzb" method="POST" novalidate>
+          <label>
+            <span class="sr-only">Name</span>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+
+          <label>
+            <span class="sr-only">Email</span>
+            <input type="email" name="email" placeholder="Your email" required />
+          </label>
+
+          <label>
+            <span class="sr-only">Your Message</span>
+            <textarea name="message" rows="5" placeholder="Your message"></textarea>
+          </label>
+          <button type="submit" class="btn">Send Message</button>
+          <!-- accessible live region for feedback -->
+          <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <!-- Footer text -->
+      <p class="footer-text">
+        © <span id="year"></span> Made with ❤️ by <strong>Fahad Khalil</strong>
+      </p>
+      <!-- Social links -->
+      <div class="footer-social">
+        <a href="https://github.com/fahadkhalil0" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/imfahadkhalil/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/SolangiFahad2" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="mailto:fahadkhalilsolangi@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
