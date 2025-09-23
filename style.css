@@ -212,7 +212,7 @@ body {
 .btn {
   display: inline-block;
   padding: .7rem 1rem;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
   background: var(--accent);
@@ -332,7 +332,7 @@ body {
 }
 
 .skill-card i {
-  margin-right: 8px;
+  margin-right: 10px;
   font-size: 1.2rem;
   color: var(--accent, #38bdf8);
 }
@@ -353,7 +353,7 @@ body {
 
 .skill-bar {
   background: var(--bg-3);
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   height: 12px;
 }
@@ -362,7 +362,7 @@ body {
   height: 100%;
   width: 0;
   background: var(--accent);
-  border-radius: 8px;
+  border-radius: 10px;
   transition: width 1.5s ease-in-out;
 }
 
@@ -390,14 +390,14 @@ body {
 
 .project-media {
   height: 140px;
-  border-radius: 8px;
+  border-radius: 10px;
   background: linear-gradient(135deg, var(--bg-3), var(--bg-2));
 }
 
 /* Project media class code */
 .project-media {
   height: 160px;
-  border-radius: 8px;
+  border-radius: 10px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -424,7 +424,7 @@ body {
   border: 1px solid rgba(148, 163, 184, 0.05);
   color: var(--text);
   padding: .6rem;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .form-feedback {
@@ -506,11 +506,20 @@ a.card-link {
   }
 
   .hero-inner {
-    display: ;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
+  .hero-inner h1 {
+    font-size: clamp(1.50rem, 4vw, 3rem);
+    margin-bottom: .6rem;
+  }
+
+  h2{
+    font-size: clamp(1.50rem, 4vw, 3rem);
+    margin-bottom: .6rem;
+}
 
   .hero-heading {
     font-size: 1.5rem;
@@ -542,14 +551,14 @@ a.card-link {
     align-items: flex-start;
   }
 
-  .about-text {
+  .about-text p{
     font-size: 10px;
-    padding: 3.5px;
-    margin: 3.5px;
+    padding: 2px;
+    margin: 2px;
   }
 
   .about-image {
-    margin: 5px;
+    margin-top: 15px;
   }
 
   .skills-grid {
@@ -568,7 +577,7 @@ a.card-link {
     padding: 1rem;
     background-color: #2AB8F8;
     /* Add background color here too */
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: -6px 0 20px rgba(0, 0, 0, 0.5);
     /* Move shadow to container */
   }
@@ -586,7 +595,7 @@ a.card-link {
     /* Add some spacing between items */
     transition: background 0.2s ease;
     background-color: yellowgreen;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     color: white;
     /* Ensure text is visible */
@@ -606,6 +615,11 @@ a.card-link {
     margin-left: auto;
     color: var(--text);
   }
+
+  .skill-card {
+  padding: 12px 18px;
+  text-align: center;
+}
 }
 
 /* For 900px */
@@ -622,6 +636,7 @@ a.card-link {
     align-items: center;
     gap: 1rem;
   }
+
 
   .hero-heading {
     font-size: 1.5rem;
@@ -653,14 +668,14 @@ a.card-link {
     /* align-items: flex-start; */
   }
 
-  .about-text {
-    font-size: 15px;
-    padding: 3.5px;
-    margin: 3.5px;
+  .about-text p{
+    font-size: 10px;
+    padding: 2px;
+    margin: 2px;
   }
 
   .about-image {
-    margin: 5px;
+    margin-top: 15px;
   }
 
   .skills-grid {
@@ -679,7 +694,7 @@ a.card-link {
     padding: 1rem;
     background-color: #2AB8F8;
     /* Add background color here too */
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: -6px 0 20px rgba(0, 0, 0, 0.5);
     /* Move shadow to container */
   }
@@ -697,7 +712,7 @@ a.card-link {
     /* Add some spacing between items */
     transition: background 0.2s ease;
     background-color: yellowgreen;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     color: white;
     /* Ensure text is visible */
@@ -735,6 +750,11 @@ a.card-link {
     gap: 1rem;
   }
 
+  .hero-inner h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: .6rem;
+  }
+
   .hero-ctas {
     display: flex;
     flex-direction: column;
@@ -750,9 +770,14 @@ a.card-link {
     padding: 0.6rem 0.9rem;
   }
 
-  .about-text p {
+  .about-text p{
     font-size: 15px;
     padding: 2px;
-    margin: 2px;
+    margin: 3px;
+    text-align: center;
+  }
+
+  .about-image {
+    margin-top: 15px;
   }
 }
