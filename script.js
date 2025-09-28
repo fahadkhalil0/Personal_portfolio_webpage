@@ -394,3 +394,34 @@ document.querySelectorAll(".nav-link").forEach(link => {
     nav.classList.remove("nav-open");
   });
 });
+
+
+// Auto-scroll for Why Choose Me section
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.querySelector(".why-container .why-grid");
+  if (!grid) return;
+
+  let scrollSpeed = 1; // px per frame (adjust speed)
+  let direction = 1;   // 1 = right, -1 = left
+  let raf;
+
+  function autoScroll() {
+    grid.scrollLeft += direction * scrollSpeed;
+
+    // reverse direction when edges hit
+    if (grid.scrollLeft + grid.clientWidth >= grid.scrollWidth) {
+      direction = -1;
+    } else if (grid.scrollLeft <= 0) {
+      direction = 1;
+    }
+
+    raf = requestAnimationFrame(autoScroll);
+  }
+
+  // start
+  autoScroll();
+
+  // stop on hover
+  grid.addEventListener("mouseenter", () => cancelAnimationFrame(raf));
+  grid.addEventListener("mouseleave", () => autoScroll());
+});
