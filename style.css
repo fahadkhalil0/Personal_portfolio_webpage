@@ -236,7 +236,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.25);
   transform: skewY(-10deg);
   transition: top 0.5s ease;
   z-index: 1;
@@ -394,6 +394,61 @@ body {
   box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
 }
 
+/* Why Choose Me */
+.why-container {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.section-subtitle {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.why-card {
+  background: var(--bg-2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.why-card i {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.why-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  border: 1px solid var(--accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
 
 /* Skills Section */
 .skills {
@@ -469,6 +524,235 @@ body {
   border-radius: 10px;
   transition: width 1.5s ease-in-out;
 }
+
+/* Services Section */
+.services-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.services-timeline::before {
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(var(--accent), transparent);
+}
+
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+}
+
+.service-icon {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  min-width: 50px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.service-content h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.service-content p {
+  margin: 0.5rem 0 0;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Certification Service */
+/* Certifications Section */
+.certifications {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  color: #fff;
+}
+
+.certifications .section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.certifications .section-subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+/* Timeline */
+.cert-timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 750px;
+  padding-left: 2rem;
+  border-left: 2px solid var(--accent, #38bdf8);
+}
+
+.cert-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.cert-item:hover {
+  transform: translateX(8px);
+}
+
+.cert-dot {
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  background: var(--accent, #38bdf8);
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* Content Box */
+.cert-content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-content:hover {
+  border-color: var(--accent, #38bdf8);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+}
+
+.cert-content h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.cert-org {
+  font-size: 0.9rem;
+  color: #38bdf8;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.cert-content p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+/* Certification Image */
+.cert-content a {
+  display: block;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.cert-content img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-content img:hover {
+  transform: scale(1.05);
+  border-color: var(--accent, #38bdf8);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cert-timeline {
+    padding-left: 1.2rem;
+  }
+
+  .cert-content {
+    padding: 0.9rem 1rem;
+  }
+
+  .cert-content img {
+    max-width: 100%;
+  }
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--accent, #38bdf8);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.cert-link:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+/* Animation for certification items */
+.cert-item {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Each item will appear one by one */
+.cert-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.cert-item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.cert-item:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/* add more nth-child if you have more items */
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 /* Projects */
 .projects h2 {
@@ -615,15 +899,16 @@ a.card-link {
     align-items: center;
     gap: 1rem;
   }
+
   .hero-inner h1 {
     font-size: clamp(1.50rem, 4vw, 3rem);
     margin-bottom: .6rem;
   }
 
-  h2{
+  h2 {
     font-size: clamp(1.50rem, 4vw, 3rem);
     margin-bottom: .6rem;
-}
+  }
 
   .hero-heading {
     font-size: 1.5rem;
@@ -655,7 +940,7 @@ a.card-link {
     align-items: flex-start;
   }
 
-  .about-text p{
+  .about-text p {
     font-size: 10px;
     padding: 2px;
     margin: 2px;
@@ -674,8 +959,8 @@ a.card-link {
     position: fixed;
     top: 64px;
     right: 0;
-    width: 220px;
-    height: 350%;
+    width: 210px;
+    height: 340%;
     /* Use viewport height minus top offset */
     flex-direction: column;
     padding: 1rem;
@@ -721,9 +1006,9 @@ a.card-link {
   }
 
   .skill-card {
-  padding: 12px 18px;
-  text-align: center;
-}
+    padding: 12px 18px;
+    text-align: center;
+  }
 }
 
 /* For 900px */
@@ -772,7 +1057,7 @@ a.card-link {
     /* align-items: flex-start; */
   }
 
-  .about-text p{
+  .about-text p {
     font-size: 10px;
     padding: 2px;
     margin: 2px;
@@ -874,7 +1159,7 @@ a.card-link {
     padding: 0.6rem 0.9rem;
   }
 
-  .about-text p{
+  .about-text p {
     font-size: 15px;
     padding: 2px;
     margin: 3px;
@@ -883,5 +1168,85 @@ a.card-link {
 
   .about-image {
     margin-top: 15px;
+  }
+}
+
+
+/* Adding the functionality on Why choose us section */
+
+/* ---------- make WHY section horizontally scrollable (override) ---------- */
+/* place this at the END of your CSS file */
+
+.why-container .why-grid {
+  /* force horizontal layout */
+  display: flex !important;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  /* spacing between cards */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* smooth momentum on iOS */
+  scroll-snap-type: x mandatory;
+  padding: 0.5rem 0 1rem;
+  /* small vertical padding */
+  margin: 0 -1.25rem;
+  /* allow cards to reach container edges if container has side padding */
+  box-sizing: border-box;
+}
+
+/* each card fixed width and snapped */
+.why-container .why-grid>.why-card {
+  flex: 0 0 260px;
+  /* width of each visible card */
+  min-width: 220px;
+  /* graceful shrink */
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+/* optional: give the first/last card some extra side spacing so they center nicely on small screens */
+.why-container .why-grid>.why-card:first-child {
+  margin-left: 1rem;
+}
+
+.why-container .why-grid>.why-card:last-child {
+  margin-right: 1rem;
+}
+
+/* scrollbar styling (keeps it clean but visible). If you want to hide it, set display:none) */
+.why-container .why-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.why-container .why-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.why-container .why-grid::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.12);
+  border-radius: 999px;
+}
+
+/* Firefox */
+.why-container .why-grid {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.12) transparent;
+}
+
+/* accessibility: allow keyboard horizontal scroll when focused */
+.why-container .why-grid:focus {
+  outline: none;
+}
+
+/* small tweak for very small screens */
+@media (max-width: 420px) {
+  .why-container .why-grid>.why-card {
+    flex: 0 0 200px;
+    min-width: 180px;
+  }
+
+  .why-container .why-grid {
+    margin: 0 -0.75rem;
+    padding: 0.4rem 0;
   }
 }
