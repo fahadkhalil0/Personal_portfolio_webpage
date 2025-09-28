@@ -425,3 +425,20 @@ document.addEventListener("DOMContentLoaded", () => {
   grid.addEventListener("mouseenter", () => cancelAnimationFrame(raf));
   grid.addEventListener("mouseleave", () => autoScroll());
 });
+
+// Scroll-to-Top Button Logic
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopBtn = document.getElementById("backToTop");
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  } else {
+    console.error('Button with id="backToTop" not found.');
+  }
+});
+
