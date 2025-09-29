@@ -137,8 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Modern Animations with GSAP
-
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -234,9 +232,6 @@ gsap.utils.toArray(".social-links a").forEach((icon, i) => {
     ease: "back.out(2)"
   });
 });
-
-
-// Stylish Footer Animations
 
 // Whole footer slides up with a soft glow
 gsap.fromTo(".site-footer",
@@ -380,6 +375,7 @@ if (heading) {
   });
 }
 
+
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav-list");
 
@@ -395,36 +391,118 @@ document.querySelectorAll(".nav-link").forEach(link => {
   });
 });
 
-
-// Auto-scroll for Why Choose Me section
+// Robust auto-scroll for Why Choose Me (mobile-friendly)
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.querySelector(".why-container .why-grid");
   if (!grid) return;
 
-  let scrollSpeed = 1; // px per frame (adjust speed)
-  let direction = 1;   // 1 = right, -1 = left
-  let raf;
+  // settings
+  let scrollSpeed = 0.6; // px/frame — reduce for slower, increase for faster
+  let direction = 1;     // 1 = right, -1 = left
+  let raf = null;
+  let resumeTimeout = null;
 
+  // helper: is the container actually scrollable right now?
+  function isScrollable() {
+    return grid.scrollWidth > grid.clientWidth + 1;
+  }
+
+  // wait until images/fonts settle (so scrollWidth is correct)
+  function waitForLayoutThenStart() {
+    // If already scrollable, start immediately
+    if (isScrollable()) {
+      startAutoScroll();
+      return;
+    }
+
+    // If there are images, wait for them to load (max fallback)
+    const imgs = Array.from(grid.querySelectorAll("img"));
+    if (imgs.length === 0) {
+      // retry after short delay (maybe fonts/layout)
+      setTimeout(() => { if (isScrollable()) startAutoScroll(); }, 300);
+      return;
+    }
+
+
+    let loaded = 0;
+    const onLoadTryStart = () => {
+      loaded++;
+      if (loaded === imgs.length) {
+        if (isScrollable()) startAutoScroll();
+        else setTimeout(() => { if (isScrollable()) startAutoScroll(); }, 250);
+      }
+    };
+
+    imgs.forEach(img => {
+      if (img.complete) onLoadTryStart();
+      else img.addEventListener("load", onLoadTryStart, { once: true });
+      img.addEventListener("error", onLoadTryStart, { once: true });
+    });
+
+    // safety fallback
+    setTimeout(() => { if (isScrollable()) startAutoScroll(); }, 800);
+  }
+
+  // the auto-scroll loop (ping-pong)
   function autoScroll() {
     grid.scrollLeft += direction * scrollSpeed;
 
-    // reverse direction when edges hit
-    if (grid.scrollLeft + grid.clientWidth >= grid.scrollWidth) {
+    if (grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 1) {
       direction = -1;
     } else if (grid.scrollLeft <= 0) {
       direction = 1;
     }
-
     raf = requestAnimationFrame(autoScroll);
   }
 
-  // start
-  autoScroll();
+  function startAutoScroll() {
+    if (raf) return;
+    raf = requestAnimationFrame(autoScroll);
+  }
 
-  // stop on hover
-  grid.addEventListener("mouseenter", () => cancelAnimationFrame(raf));
-  grid.addEventListener("mouseleave", () => autoScroll());
+  function stopAutoScroll() {
+    if (raf) cancelAnimationFrame(raf);
+    raf = null;
+  }
+
+  function scheduleResume(delay = 3000) {
+    clearTimeout(resumeTimeout);
+    resumeTimeout = setTimeout(() => {
+      if (isScrollable()) startAutoScroll();
+    }, delay);
+  }
+
+  // start only after layout settled
+  waitForLayoutThenStart();
+
+  // Desktop: pause on mouse hover, resume on leave
+  grid.addEventListener("mouseenter", () => stopAutoScroll(), { passive: true });
+  grid.addEventListener("mouseleave", () => scheduleResume(600), { passive: true });
+
+  // Touch / pointer events: pause on interaction, resume after inactivity
+  grid.addEventListener("touchstart", () => { stopAutoScroll(); clearTimeout(resumeTimeout); }, { passive: true });
+  grid.addEventListener("pointerdown", () => { stopAutoScroll(); clearTimeout(resumeTimeout); }, { passive: true });
+
+  grid.addEventListener("touchend", () => scheduleResume(3000), { passive: true });
+  grid.addEventListener("pointerup", () => scheduleResume(3000), { passive: true });
+
+  // If user manually scrolls (wheel / drag), pause and resume after idle
+  grid.addEventListener("scroll", () => {
+    stopAutoScroll();
+    scheduleResume(3000);
+  }, { passive: true });
+
+  // Optional: adapt when window resizes / orientation changes
+  window.addEventListener("resize", () => {
+    // small debounce
+    clearTimeout(resumeTimeout);
+    stopAutoScroll();
+    setTimeout(() => {
+      if (isScrollable()) startAutoScroll();
+    }, 300);
+  });
 });
+
 
 // Scroll-to-Top Button Logic
 document.addEventListener("DOMContentLoaded", () => {
@@ -441,4 +519,3 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error('Button with id="backToTop" not found.');
   }
 });
-
