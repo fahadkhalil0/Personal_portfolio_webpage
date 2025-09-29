@@ -940,32 +940,25 @@ a.card-link {
     gap: 1rem;
   }
 
-.nav-list {
-  position: fixed;
-  top: 64px;
-  right: 0;
-  width: 200px;
-  height: 420%;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: #1a5a78;
-  border-radius: 10px;
-  box-shadow: -6px 0 20px rgba(0, 0, 0, 0.5);
+  .nav-list {
+    display: none;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    width: 200px;
+    height: 420%;
+    /* Use viewport height minus top offset */
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #1a5a78;
+    border-radius: 10px;
+    box-shadow: -6px 0 20px rgba(0, 0, 0, 0.5);
+  }
 
-  /* Hidden by default */
-  opacity: 0;
-  transform: translateX(100%);
-  pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-/* Show when nav-open class is added */
-.nav-list.nav-open {
-  opacity: 1;
-  transform: translateX(0);
-  pointer-events: auto;
-}
-
+  /* Show when nav-open class is added */
+  .nav-list.nav-open {
+    display: flex;
+  }
 
   /* Individual menu items */
   .nav-link {
@@ -1083,32 +1076,25 @@ a.card-link {
     gap: 1rem;
   }
 
-.nav-list {
-  position: fixed;
-  top: 64px;
-  right: 0;
-  width: 200px;
-  height: 420%;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: #1a5a78;
-  border-radius: 10px;
-  box-shadow: -6px 0 20px rgba(0, 0, 0, 0.5);
+  .nav-list {
+    display: none;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    width: 200px;
+    height: 420%;
+    /* Use viewport height minus top offset */
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #1a5a78;
+    border-radius: 10px;
+    box-shadow: -6px 0 20px rgba(0, 0, 0, 0.5);
+  }
 
-  /* Hidden by default */
-  opacity: 0;
-  transform: translateX(100%);
-  pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-/* Show when nav-open class is added */
-.nav-list.nav-open {
-  opacity: 1;
-  transform: translateX(0);
-  pointer-events: auto;
-}
-
+  /* Show when nav-open class is added */
+  .nav-list.nav-open {
+    display: flex;
+  }
 
   /* Individual menu items */
   .nav-link {
@@ -1235,6 +1221,7 @@ a.card-link {
 .certifications .section-title {
     font-size: 1.50rem;
 }}
+
 
 /* Dont touch it, It is seperate section for grid cards */
 /* Adding the functionality on Why choose us section */
