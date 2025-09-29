@@ -74,14 +74,10 @@ body {
   padding: 0.9rem 0;
 }
 
-
 .logo img {
   height: 42px;
-  /* keeps it neat */
   width: auto;
-  /* no stretching */
   display: block;
-  /* removes bottom gap */
 }
 
 .primary-nav {}
@@ -182,14 +178,12 @@ body {
 
 .hero-heading .accent {
   color: var(--accent);
-  /* keeps your blue */
 }
 
 .hero-heading .cursor {
   opacity: 0;
   display: inline-block;
   color: var(--accent);
-  /* dot also in blue */
   animation: blink 1.50s infinite;
 }
 
@@ -311,13 +305,10 @@ body {
   width: 100%;
   height: auto;
   max-width: 250px;
-  /* keeps it from stretching too wide */
   border-radius: 12px;
   margin-bottom: 1rem;
   object-fit: cover;
-  /* makes it crop instead of stretch */
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-  /* optional polish */
 }
 
 .social-links a {
@@ -433,8 +424,6 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
 .why-card i {
   font-size: 2rem;
   color: var(--accent);
@@ -456,7 +445,6 @@ body {
   border: 1px solid var(--accent);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
-
 
 /* Skills Section */
 .skills {
@@ -504,7 +492,6 @@ body {
   color: var(--accent, #38bdf8);
 }
 
-/* For more functionality */
 /* Skills Progress Bars */
 .skill {
   margin-bottom: 1.5rem;
@@ -590,7 +577,6 @@ body {
   line-height: 1.5;
 }
 
-/* Certification Service */
 /* Certifications Section */
 .certifications {
   padding: 4rem 1.5rem;
@@ -752,7 +738,6 @@ body {
 }
 
 /* add more nth-child if you have more items */
-
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -760,9 +745,7 @@ body {
   }
 }
 
-
-
-/* Projects */
+/* Project Section */
 .projects h2 {
   margin-bottom: .4rem;
 }
@@ -804,7 +787,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Contact */
+/* Contact Form */
 .contact .contact-form {
   max-width: 520px;
   margin: 1rem auto 0;
@@ -832,7 +815,6 @@ body {
 /* Footer */
 .site-footer {
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 1));
-  /* padding: 2rem 0; */
   text-align: center;
   border-top: 1px solid rgba(148, 163, 184, 0.15);
 }
@@ -841,7 +823,6 @@ body {
   margin-bottom: .50rem;
   font-size: 0.95rem;
   color: #e5e7eb;
-  /* light gray for visibility */
 }
 
 .footer-social a {
@@ -849,13 +830,11 @@ body {
   margin: 0 0.6rem;
   font-size: 1.3rem;
   color: #94a3b8;
-  /* muted gray */
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-social a:hover {
   color: #38bdf8;
-  /* cyan glow on hover */
   transform: scale(1.2);
 }
 
@@ -935,7 +914,6 @@ a.card-link {
     gap: 0.75rem;
     width: 100%;
     max-width: 250px;
-    /* buttons ek jagah center align */
   }
 
   .hero-ctas .btn {
@@ -950,7 +928,6 @@ a.card-link {
   }
 
   .about-text p {
-    /* font-size: 10px; */
     padding: 2px;
     margin: 2px;
   }
@@ -983,7 +960,6 @@ a.card-link {
   /* Show when nav-open class is added */
   .nav-list.nav-open {
     display: flex;
-    /* Background color and other styles already inherited from .nav-list */
   }
 
   /* Individual menu items */
@@ -996,7 +972,6 @@ a.card-link {
     border-radius: 10px;
     text-decoration: none;
     color: white;
-    /* Ensure text is visible */
   }
 
   .nav-link:hover {
@@ -1087,7 +1062,6 @@ a.card-link {
     gap: 0.75rem;
     width: 100%;
     max-width: 250px;
-    /* buttons ek jagah center align */
   }
 
   .hero-ctas .btn {
@@ -1098,7 +1072,6 @@ a.card-link {
 
   .about-container {
     display: block;
-    /* align-items: flex-start; */
   }
 
   .skills-grid {
@@ -1116,29 +1089,24 @@ a.card-link {
     flex-direction: column;
     padding: 1rem;
     background-color: #2AB8F8;
-    /* Add background color here too */
     border-radius: 10px;
     box-shadow: -6px 0 20px rgba(0, 0, 0, 0.5);
-    /* Move shadow to container */
   }
 
   /* Show when nav-open class is added */
   .nav-list.nav-open {
     display: flex;
-    /* Background color and other styles already inherited from .nav-list */
   }
 
   /* Individual menu items */
   .nav-link {
     padding: 0.5rem;
     margin-bottom: 0.25rem;
-    /* Add some spacing between items */
     transition: background 0.2s ease;
     background-color: yellowgreen;
     border-radius: 10px;
     text-decoration: none;
     color: white;
-    /* Ensure text is visible */
   }
 
   .nav-link:hover {
@@ -1186,9 +1154,7 @@ a.card-link {
 
 .certifications .section-title {
     font-size: 1.50rem;
-}
-
-}
+}}
 
 /* For 1024  */
 @media (max-width: 1024px) {
@@ -1216,7 +1182,6 @@ a.card-link {
     gap: 0.75rem;
     width: 100%;
     max-width: 250px;
-    /* buttons ek jagah center align */
   }
 
   .hero-ctas .btn {
@@ -1255,18 +1220,13 @@ a.card-link {
 
 .certifications .section-title {
     font-size: 1.50rem;
-}
-}
-
+}}
 
 /* Adding the functionality on Why choose us section */
-
 .why-container .why-grid {
-  /* force horizontal layout */
   display: flex !important;
   flex-wrap: nowrap;
   gap: 1rem;
-  /* spacing between cards */
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   /* smooth momentum on iOS */
@@ -1281,7 +1241,6 @@ a.card-link {
 /* each card fixed width and snapped */
 .why-container .why-grid>.why-card {
   flex: 0 0 260px;
-  /* width of each visible card */
   min-width: 220px;
   /* graceful shrink */
   scroll-snap-align: start;
@@ -1367,6 +1326,7 @@ a.card-link {
   }
 }
 
+/* For 900px */
 @media (max-width: 900px) {
   .why-container .why-grid {
     display: flex !important;
@@ -1412,6 +1372,7 @@ a.card-link {
   }
 }
 
+/* For 1024px */
 @media (max-width: 1024px) {
   .why-container .why-grid {
     display: flex !important;
@@ -1463,8 +1424,6 @@ a.card-link {
   touch-action: pan-x;               /* allow horizontal pan */
 }
 
-
-/* Button Styling */
 /* Back to Top Button */
 #backToTop {
   position: fixed;
