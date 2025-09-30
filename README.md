@@ -1,8 +1,8 @@
-# 🌟 Personal Portfolio Website  
+# 🌟 Personal Portfolio Landing Page 
 
-![Portfolio Banner](https://via.placeholder.com/1200x300.png?text=My+Portfolio+Website)  
+![Portfolio Banner](https://placehold.co/1200x300/1a5a78/ffffff?text=Welcome+to+My+Portfolio+Website)  
 
-A modern, fully responsive **Personal Portfolio Website** showcasing my **skills, services, certifications, and projects** with an attractive UI/UX.  
+A modern, fully responsive **Personal Portfolio Landing Page** showcasing my **skills, services, certifications, and projects** with an attractive UI/UX.  
 This website is designed for recruiters, clients, and anyone who wants to know **who I am and what I do**.  
 
 ## 🎯 Purpose  
@@ -40,17 +40,16 @@ The main aim of this portfolio is to:
 - 🎨 Smooth hover effects and transitions  
 - 🌀 Auto-scroll system for certain sections  
 
-## 🚀 Live Demo  
+## 🚀 Live Demo
 
-👉 [Visit My Portfolio](#) *https://fahadkhalil.netlify.app/* 
+👉 Visit my Landing Page: https://fahadkhalil.netlify.app/ 
 
 ## 🤝 Contributing
-
-## This is my personal portfolio, but suggestions are always welcome!
-## If you’d like to contribute, feel free to fork this repo and submit a pull request.
+This is my personal portfolio, but suggestions are always welcome!
+If you’d like to contribute, feel free to fork this repo and submit a pull request.
 
 ## 📬 Contact Me
 
-## 💼 LinkedIn: https://www.linkedin.com/in/imfahadkhalil/
-## 📧 Email: fahadkhalil.se@gmail.com
-## 🐦 Twitter: SolangiFahad2
+💼 LinkedIn: https://www.linkedin.com/in/imfahadkhalil/
+📧 Email: fahadkhalil.se@gmail.com
+🐦 Twitter: SolangiFahad2
