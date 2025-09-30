@@ -163,6 +163,12 @@ body {
   color: var(--accent);
 }
 
+.hero-ctas .btn i {
+  margin-right: 0.5rem; /* space between icon and text */
+  font-size: 1rem;     /* adjust icon size */
+}
+
+
 /* Animation styling css code  */
 .hero-heading {
   font-size: clamp(2rem, 6vw, 3.5rem);
@@ -254,7 +260,7 @@ body {
   margin-top: 0px;
 }
 
-.btn-resume{
+.btn-resume {
   text-align: center;
   padding: 0;
 }
@@ -875,6 +881,13 @@ a.card-link {
 
 /* small devices */
 @media (max-width: 767px) {
+
+  html,
+  body {
+    height: 100%;
+    padding: 3px;
+  }
+
   .hero {
     padding: 2rem 1rem;
     text-align: center;
@@ -899,7 +912,7 @@ a.card-link {
   }
 
   .hero-heading {
-    font-size: 1.5rem;
+    font-size: 1.50rem;
     line-height: 1.2;
   }
 
@@ -965,7 +978,7 @@ a.card-link {
     padding: 0.5rem;
     margin-bottom: 0.25rem;
     transition: background 0.6s ease;
-    background-color:#0F172A;
+    background-color: #0F172A;
     border-radius: 15px;
     text-decoration: none;
     color: white;
@@ -993,39 +1006,45 @@ a.card-link {
   }
 
   .about-aside img {
-  width: 70%;
-  height: auto;
-  max-width: 200px;
-  border-radius: 50px;
-}
+    width: 70%;
+    height: auto;
+    max-width: 200px;
+    border-radius: 50px;
+  }
 
-.resume-btn-wrapper {
+  .resume-btn-wrapper {
     text-align: center;
     margin-top: 0;
-}
+  }
 
-.section h2 {
-  margin-bottom: 1rem;
-  font-size: 1.50rem;
-}
-
-.section p {
-  font-size: 11px;
-  color: var(--muted);
-  text-align: center;
-}
-
-.certifications .section-title {
+  .section h2 {
+    margin-bottom: 1rem;
     font-size: 1.50rem;
-}
+  }
 
-.why-container .why-grid {
+  .section p {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  .certifications .section-title {
+    font-size: 1.50rem;
+  }
+
+  .why-container .why-grid {
     width: auto;
-}
+  }
 }
 
 /* For 900px */
 @media (max-width: 900px) {
+  
+  html,
+  body {
+    height: 100%;
+    padding: 3px;
+  }
   .hero {
     padding: 2rem 1rem;
     text-align: center;
@@ -1101,7 +1120,7 @@ a.card-link {
     padding: 0.5rem;
     margin-bottom: 0.25rem;
     transition: background 0.6s ease;
-    background-color:#0F172A;
+    background-color: #0F172A;
     border-radius: 15px;
     text-decoration: none;
     color: white;
@@ -1129,31 +1148,32 @@ a.card-link {
   }
 
   .about-aside img {
-  width: 70%;
-  height: auto;
-  max-width: 200px;
-  border-radius: 50px;
-}
+    width: 70%;
+    height: auto;
+    max-width: 200px;
+    border-radius: 50px;
+  }
 
-.resume-btn-wrapper {
+  .resume-btn-wrapper {
     text-align: center;
     margin-top: 0;
-}
+  }
 
-.section h2 {
-  margin-bottom: 1rem;
-  font-size: 1.50rem;
-}
-
-.section p {
-  font-size: 11px;
-  color: var(--muted);
-  text-align: center;
-}
-
-.certifications .section-title {
+  .section h2 {
+    margin-bottom: 1rem;
     font-size: 1.50rem;
-}}
+  }
+
+  .section p {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  .certifications .section-title {
+    font-size: 1.50rem;
+  }
+}
 
 
 /* For 1024  */
@@ -1196,31 +1216,32 @@ a.card-link {
   }
 
   .about-aside img {
-  width: 70%;
-  height: auto;
-  max-width: 200px;
-  border-radius: 50px;
-}
+    width: 70%;
+    height: auto;
+    max-width: 200px;
+    border-radius: 50px;
+  }
 
-.resume-btn-wrapper {
+  .resume-btn-wrapper {
     text-align: center;
     margin-top: 0;
-}
+  }
 
-.section h2 {
-  margin-bottom: 1rem;
-  font-size: 1.50rem;
-}
-
-.section p {
-  font-size: 11px;
-  color: var(--muted);
-  text-align: center;
-}
-
-.certifications .section-title {
+  .section h2 {
+    margin-bottom: 1rem;
     font-size: 1.50rem;
-}}
+  }
+
+  .section p {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  .certifications .section-title {
+    font-size: 1.50rem;
+  }
+}
 
 
 /* Dont touch it, It is seperate section for grid cards */
@@ -1296,18 +1317,18 @@ a.card-link {
     box-sizing: border-box;
   }
 
-  .why-container .why-grid > .why-card {
+  .why-container .why-grid>.why-card {
     flex: 0 0 260px;
     min-width: 220px;
     scroll-snap-align: start;
     box-sizing: border-box;
   }
 
-  .why-container .why-grid > .why-card:first-child {
+  .why-container .why-grid>.why-card:first-child {
     margin-left: 1rem;
   }
 
-  .why-container .why-grid > .why-card:last-child {
+  .why-container .why-grid>.why-card:last-child {
     margin-right: 1rem;
   }
 
@@ -1315,13 +1336,16 @@ a.card-link {
   .why-container .why-grid::-webkit-scrollbar {
     height: 8px;
   }
+
   .why-container .why-grid::-webkit-scrollbar-track {
     background: transparent;
   }
+
   .why-container .why-grid::-webkit-scrollbar-thumb {
     background: rgba(148, 163, 184, 0.12);
     border-radius: 999px;
   }
+
   .why-container .why-grid {
     scrollbar-width: thin;
     scrollbar-color: rgba(148, 163, 184, 0.12) transparent;
@@ -1342,18 +1366,18 @@ a.card-link {
     box-sizing: border-box;
   }
 
-  .why-container .why-grid > .why-card {
+  .why-container .why-grid>.why-card {
     flex: 0 0 260px;
     min-width: 220px;
     scroll-snap-align: start;
     box-sizing: border-box;
   }
 
-  .why-container .why-grid > .why-card:first-child {
+  .why-container .why-grid>.why-card:first-child {
     margin-left: 1rem;
   }
 
-  .why-container .why-grid > .why-card:last-child {
+  .why-container .why-grid>.why-card:last-child {
     margin-right: 1rem;
   }
 
@@ -1361,13 +1385,16 @@ a.card-link {
   .why-container .why-grid::-webkit-scrollbar {
     height: 8px;
   }
+
   .why-container .why-grid::-webkit-scrollbar-track {
     background: transparent;
   }
+
   .why-container .why-grid::-webkit-scrollbar-thumb {
     background: rgba(148, 163, 184, 0.12);
     border-radius: 999px;
   }
+
   .why-container .why-grid {
     scrollbar-width: thin;
     scrollbar-color: rgba(148, 163, 184, 0.12) transparent;
@@ -1388,18 +1415,18 @@ a.card-link {
     box-sizing: border-box;
   }
 
-  .why-container .why-grid > .why-card {
+  .why-container .why-grid>.why-card {
     flex: 0 0 260px;
     min-width: 220px;
     scroll-snap-align: start;
     box-sizing: border-box;
   }
 
-  .why-container .why-grid > .why-card:first-child {
+  .why-container .why-grid>.why-card:first-child {
     margin-left: 1rem;
   }
 
-  .why-container .why-grid > .why-card:last-child {
+  .why-container .why-grid>.why-card:last-child {
     margin-right: 1rem;
   }
 
@@ -1407,13 +1434,16 @@ a.card-link {
   .why-container .why-grid::-webkit-scrollbar {
     height: 8px;
   }
+
   .why-container .why-grid::-webkit-scrollbar-track {
     background: transparent;
   }
+
   .why-container .why-grid::-webkit-scrollbar-thumb {
     background: rgba(148, 163, 184, 0.12);
     border-radius: 999px;
   }
+
   .why-container .why-grid {
     scrollbar-width: thin;
     scrollbar-color: rgba(148, 163, 184, 0.12) transparent;
@@ -1422,8 +1452,10 @@ a.card-link {
 
 /* ensure horizontal touch pan works nicely */
 .why-container .why-grid {
-  -webkit-overflow-scrolling: touch; /* smooth momentum on iOS */
-  touch-action: pan-x;               /* allow horizontal pan */
+  -webkit-overflow-scrolling: touch;
+  /* smooth momentum on iOS */
+  touch-action: pan-x;
+  /* allow horizontal pan */
 }
 
 /* Back to Top Button */
