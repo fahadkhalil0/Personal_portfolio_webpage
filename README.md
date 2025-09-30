@@ -1,6 +1,6 @@
 # 🌟 Personal Portfolio Landing Page 
 
-![Portfolio Banner](https://placehold.co/1200x300/2ab8f8/0f172a?text=Fahad+Khalil+-+Personal+Portfolio)
+![Portfolio Banner](https://placehold.co/1200x300/0f172a/2ab8f8?text=💻+My+Personal+Portfolio+🌐)
   
 
 A modern, fully responsive **Personal Portfolio Landing Page** showcasing my **skills, services, certifications, and projects** with an attractive UI/UX.  
