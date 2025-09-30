@@ -1,6 +1,6 @@
 # 🌟 Personal Portfolio Landing Page 
 
-![Portfolio Banner](https://placehold.co/1200x300/0f172a/2ab8f8?text=💻+My+Personal+Portfolio+🌐)
+![Portfolio Banner](https://placehold.co/1200x300/ffffff/1a5a78?text=Showcasing+My+Skills+and+Projects)
   
 
 A modern, fully responsive **Personal Portfolio Landing Page** showcasing my **skills, services, certifications, and projects** with an attractive UI/UX.  
