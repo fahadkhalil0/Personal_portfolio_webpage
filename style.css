@@ -164,8 +164,10 @@ body {
 }
 
 .hero-ctas .btn i {
-  margin-right: 0.5rem; /* space between icon and text */
-  font-size: 1rem;     /* adjust icon size */
+  margin-right: 0.5rem;
+  /* space between icon and text */
+  font-size: 1rem;
+  /* adjust icon size */
 }
 
 
@@ -1039,12 +1041,13 @@ a.card-link {
 
 /* For 900px */
 @media (max-width: 900px) {
-  
+
   html,
   body {
     height: 100%;
     padding: 3px;
   }
+
   .hero {
     padding: 2rem 1rem;
     text-align: center;
