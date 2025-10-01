@@ -884,10 +884,9 @@ a.card-link {
 /* small devices */
 @media (max-width: 767px) {
 
-  html,
   body {
     height: 100%;
-    padding: 3px;
+    padding: 4px;
   }
 
   .hero {
@@ -1042,10 +1041,9 @@ a.card-link {
 /* For 900px */
 @media (max-width: 900px) {
 
-  html,
   body {
     height: 100%;
-    padding: 3px;
+    padding: 4px;
   }
 
   .hero {
